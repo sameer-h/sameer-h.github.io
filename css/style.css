@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+@font-face {
+    font-family: CircularStd;
+    src: url(assets/fonts/CircularStd-Bold.eot);
+    src: url("assets/fonts/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/CircularStd-Bold.woff") format("woff"), url("assets/fonts/CircularStd-Bold.ttf") format("truetype"), url("assets/fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+}
 /* navigation */
 .navbar{
     position: fixed;
@@ -107,19 +114,32 @@
     text-transform: uppercase;
 }
 .home .row-left h1{
+    overflow: hidden;
+    white-space: nowrap;
     font-size: 2rem;
     font-family: var(--poppins);
     text-transform: capitalize;
     line-height: 1.2;
-    font-weight: 900;
+    font-weight: 600;
+    animation:
+        typing 3.0s steps(60, end),
+        blink-caret .75s step-end infinite;
 }
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 90% }
+  }
+
+
 .home .row-left h1 span{
     color: var(--blue);
 }
 .home .row-left h2{
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-family: var(--poppins);
     font-size: 1rem;
+    font-weight: 300;
 }
 .home-pg-btn{
     display: flex;
@@ -132,6 +152,12 @@
 }
 .home-pg-btn button:first-child{
     border-color: var(--blue);
+    /* border: 1px solid #f7f7f7; */
+}
+.home-pg-btn button:nth-child(2){
+    color: var(--green);
+    border-color: var(--blue);
+    /* border: 1px solid #f7f7f7; */
 }
 .home-pg-btn button:last-child{
     background: transparent;
@@ -496,9 +522,10 @@
         text-align: left;
     }
     .home .img-container{
-        width: 100%;
+        transform: scale(0.8);
+        width: 90%;
         height: 100%;
-        border-radius: unset;
+        border-radius: 60%;
     }
     .home .img-border{
         height: 90%;
