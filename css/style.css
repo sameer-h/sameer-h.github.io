@@ -188,7 +188,11 @@
     padding: 3rem 0;
 }
 .about .row-right p{
+    font-size: 1.5rem;
     margin: 1rem 0;
+}
+.about .row-left p{
+    font-size: 1.5rem;
 }
 .about-content{
     margin: 1.5rem 0;
@@ -211,6 +215,12 @@
 .about .row-right h3 span{
     color: #fff;
     font-weight: 400;
+}
+
+.about .row-left p{
+    font-family: var(--poppins);
+    font-size: 2rem;
+
 }
 
 /* Qualifications Page */
@@ -411,15 +421,29 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .about .row{
+        display: flex;
+        justify-content: center;
+    }
     /* about page */
     .about .row-left{
-        width: 400px;
-        height: 400px;
-        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: .2rem auto;
         overflow: hidden;
-        border-radius: 50%;
-        position: relative;
     }
+    
+    .about .row-left img{
+        width: 300px;
+        height: 300px;
+        margin-right: 0.5rem;
+    }
+
+    .about .row-left .circular{
+        border-radius: 50%;
+    }
+
     /* resume page */
     .resume .row{
         display: grid;
@@ -525,10 +549,13 @@
         transform: scale(0.8);
         width: 90%;
         height: 100%;
+        border-style: solid;
+        border-color: #f7f7f7;
+        border-width: 5px;
         border-radius: 60%;
     }
     .home .img-border{
-        height: 90%;
+        height: 85%;
         width: 100%;
         transition: var(--transition);
         border-radius: unset;
@@ -536,6 +563,7 @@
     }
     .home .img-border:hover{
         transform: translateY(-14px);
+
     }
 
     /* about page */
